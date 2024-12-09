@@ -18,6 +18,10 @@ pipeline{
             }    
         }
         stage("deploy_on_test"){
+            input {
+               message "should we continue?"
+               ok "yes we will continue"
+            }
             steps{
                //for deploy on container >> container of plugins
                 deploy adapters: [tomcat9(credentialsId: 'ec8ed907-6f26-40bc-be33-e5bfe9dc91ed', path: '', url: 'http://192.168.8.247:8081')], contextPath: '/app', war: '**/*.war'

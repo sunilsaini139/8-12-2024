@@ -1,8 +1,5 @@
 pipeline{
-    agent{
-      // run this task on node machine where label match
-        label "node"
-    }
+    agent any
     stages{
         stage("test"){
             steps{

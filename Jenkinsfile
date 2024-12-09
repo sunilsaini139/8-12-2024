@@ -3,10 +3,6 @@ pipeline{
       // run this task on node machine where label match
         label "node"
     }
-    tools {
-      //install maven tools automatically
-      maven 'maven'
-    }
     stages{
         stage("test"){
             steps{

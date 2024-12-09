@@ -5,7 +5,7 @@ pipeline{
     }
     tools {
       //install maven tools automatically
-      maven 'MAVEN'
+      maven 'maven'
     }
     stages{
         stage("test"){
